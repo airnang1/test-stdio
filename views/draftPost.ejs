@@ -1,0 +1,76 @@
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="/profiles/update">Profile</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Categories
+    </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% if(category) { %>
+                <% category.forEach(m => { %>
+                    <li>
+                        <a class="dropdown-item" href="/categories/<%-m.name%>">
+                            <%-m.name%>
+                        </a>
+                    </li>
+
+                    <% }) %>
+                        <% } %>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/products">Add Post</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/categories">Add Categories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/products/draft">Draft</a>
+    </li>
+    .;
+    <li class="nav-item">
+        <a class="nav-link" href="/products/public">Public</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/users/logout">Logout</a>
+    </li>
+</ul>
+<h1 class="mt-4">Draft</h1>
+<div class="wrap-posts">
+    <% if(post) { %>
+        <% post.forEach(m=> { %>
+            <div class="wrap-detail-post">
+                <a href="/details/<%-m.id%>">
+                    <div class="card mb-3">
+                        <div class="ui small stackable images text-center">
+                            <img src="<%= m.coverImagePath %>" class="ui image" alt="" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%-m.title%>
+                            </h5>
+                            <p class="card-text">
+                                <%-m.description %>
+                            </p>
+                            <p class="card-text">Author:
+                                <%-m.author %>
+                            </p>
+                            <p class="card-text">
+                                <small id="date" class="text-muted">Date: <%-new Intl.DateTimeFormat('pt-PT').format(m.date)%>
+            </small>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/products/changepublic/<%-m.id%>" class="btn btn-success btn-add-public">Change to Public</a
+    >
+    <a href="/products/delete/<%-m.id%>" class="btn btn-primary btn-add-public"
+      >Delete</a
+    >
+  </div>
+  <% }) %> <% } %>
+</div>

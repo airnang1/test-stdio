@@ -1,0 +1,63 @@
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="/profiles/update">Profile</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Categories
+    </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% if(category) { %>
+                <% category.forEach(m => { %>
+                    <li>
+                        <a class="dropdown-item" href="/categories/<%-m.name%>">
+                            <%-m.name%>
+                        </a>
+                    </li>
+
+                    <% }) %>
+                        <% } %>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/products">Add Post</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/categories">Add Categories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/products/draft">Draft</a>
+    </li>
+    .;
+    <li class="nav-item">
+        <a class="nav-link" href="/products/public">Public</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/users/logout">Logout</a>
+    </li>
+</ul>
+<h1>
+    Edit Profiles</h1>
+<form action="/profiles/update?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" id="name" name="name" value="<%-data.name%>" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="password">password</label>
+        <input class="form-control" id="password" name="password" type="password"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="age">age</label>
+        <input class="form-control" id="age" name="age" value="<%-data.age%>" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input class="form-control" id="gender" name="gender" value="<%-data.gender%>" type="text" />
+    </div>
+    <button class="btn btn-primary"> Update</button>
+</form>

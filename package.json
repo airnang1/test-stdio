@@ -1,0 +1,35 @@
+{
+    "name": "node_test",
+    "version": "3.5.7",
+    "description": "Node.js test",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon --inspect app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.0",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.6",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "express-ejs-layouts": "^2.5.0",
+        "express-session": "^1.15.6",
+        "gridfs-stream": "^1.1.1",
+        "jshint": "^2.13.4",
+        "method-override": "^3.0.0",
+        "mongoose": "^5.9.13",
+        "multer": "^1.4.5-lts.1",
+        "node-localstorage": "^2.2.1",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "store2": "^2.13.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}

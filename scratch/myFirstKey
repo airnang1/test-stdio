@@ -1,0 +1,10 @@
+{
+  _id: 62ad913f9760222e80c11514,
+  name: 'ba1',
+  email: 'aba.@gmail.com',
+  password: '$2a$10$okNXx5XIyRnFwY2a55pSGerqIY9PU.qhfboc5b4nyZ8u3I2LMm3A.',
+  age: '123',
+  gender: 'nam3',
+  date: 2022-06-18T08:47:59.847Z,
+  __v: 0
+}
