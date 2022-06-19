@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "62af507c8a546b49803a9e1a"
+  },
+  "name": "bao",
+  "email": "info@gmail.comn",
+  "password": "$2a$10$kvrZrjY3azt1DsOu1CwrWOn62NpRtp/mEAHZlGR5DiLUCIeq8Kr5y",
+  "age": "1",
+  "gender": "male",
+  "date": {
+    "$date": {
+      "$numberLong": "1655656572878"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62af7ae2bef35d11c437574a"
+  },
+  "name": "hieu",
+  "email": "aba.@gmail.com",
+  "password": "$2a$10$rAdiaTKqgSzyB8Cqa3II5elbxETf7clDYdZ.jcxRfFZYvRk36ZMgG",
+  "age": "14",
+  "gender": "male",
+  "date": {
+    "$date": {
+      "$numberLong": "1655667426792"
+    }
+  },
+  "__v": 0
+}]
