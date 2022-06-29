@@ -1,4 +1,4 @@
-dbPassword = "mongodb+srv://airnang:airnang@cluster0.uxksf.mongodb.net/test";
+dbPassword = "";
 
 module.exports = {
     mongoURI: dbPassword,
